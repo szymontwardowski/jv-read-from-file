@@ -9,14 +9,14 @@ import java.util.List;
 
 class Words {
     public String[] readFromFile(String fileName) {
-        List<String> lines;
+        List<String> result = new ArrayList<>();
+        List<String> lines = new ArrayList<>();
+
         try {
             lines = Files.readAllLines(Path.of(fileName));
         } catch (IOException e) {
-            return new String[0];
+            e.printStackTrace();
         }
-
-        List<String> result = new ArrayList<>();
 
         for (String line : lines) {
             String[] words = line.split("\\W+");
