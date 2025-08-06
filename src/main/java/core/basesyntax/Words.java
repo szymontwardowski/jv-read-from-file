@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 class Words {
     public String[] readFromFile(String fileName) {
         List<String> lines;
